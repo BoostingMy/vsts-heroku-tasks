@@ -6,8 +6,10 @@ For this release task to work it is required an valid `API Key`. See the [Wiki](
 
 ## Parameters
 ### Push To Heroku
-**API Key:** An valid API Key that represents a valid app contributor. 
+**API Key:** An valid API Key that represents a valid app contributor.
+
 **App name:** Name of the app which should be updated.
+
 **Git Ignore:** File or folder paths to ignore on pushing to Keroku. See the [gitignore documentation](https://git-scm.com/docs/gitignore).
 
 ## Known issues

@@ -5,7 +5,7 @@ Release tasks for interacting with heroku on [Visual Studio Team Services](http:
 The release tasks can be installed by installing the [Heroku Release Tools Extension](https://marketplace.visualstudio.com/items/boostingmy.vsts-heroku-tasks) from the Visual Studio Team Services Marketplace. 
 
 ## Available Tasks
-* [Push To Heroku](https://github.com/BoostingMy/vsts-heroku-tasks/blob/master/Tasks/PushToHeroku/README.md)
+* [Push To Heroku](https://github.com/BoostingMy/vsts-heroku-tasks/tree/master/Tasks/PushToHeroku)
 
   Updates an app remote Git repository on Heroku.
 
