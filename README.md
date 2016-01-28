@@ -7,7 +7,7 @@ The release tasks can be installed by installing the [Heroku Release Tools Exten
 ## Available Tasks
 * [Push To Heroku](https://github.com/BoostingMy/vsts-heroku-tasks/blob/master/Tasks/PushToHeroku/README.md)
 
-  Updates an app remote Git repository on Heroku with the files on the agent.
+  Updates an app remote Git repository on Heroku.
 
 ## Usage
 See the [Wiki](https://github.com/BoostingMy/vsts-heroku-tasks/wiki) for documentation.
