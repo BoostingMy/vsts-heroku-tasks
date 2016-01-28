@@ -12,5 +12,5 @@ For this release task to work it is required an valid `API Key`. See the [Wiki](
 **Git Ignore:** File or folder paths to ignore on pushing to Keroku. See the [gitignore documentation](https://git-scm.com/docs/gitignore).
 
 ## Known issues
-* If you have any issues, please let us know [here](https://github.com/BoostingMy/vsts-heroku-tasks/issues).
+If you have any issues, please let us know [here](https://github.com/BoostingMy/vsts-heroku-tasks/issues).
 
