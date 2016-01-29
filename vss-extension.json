@@ -2,9 +2,9 @@
     "manifestVersion": 1,
     "id": "vsts-heroku-tasks",
     "name": "Heroku Release Tools",
-    "version": "0.0.18",
+    "version": "0.0.19",
     "publisher": "BoostingMy",
-    "public": false,
+    "public": true,
     "targets": [
         {
             "id": "Microsoft.VisualStudio.Services"
