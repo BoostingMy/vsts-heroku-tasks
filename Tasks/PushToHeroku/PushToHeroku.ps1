@@ -9,7 +9,9 @@ param(
     [String][Parameter(Mandatory = $false)] 
     $GitIgnore,
     [String][Parameter(Mandatory = $false)] 
-    $CommitMessage
+    $CommitMessage,
+    [bool][Parameter(Mandatory = $false)] 
+    $ForceOnPushing
 )
 
 # Code snippet from Server Fault by Nathan Chere
@@ -76,6 +78,7 @@ Write-Verbose "Entering script PushToHeroku.ps1"
     Write-Verbose "GitIgnore:"
     $GitIgnore -split '\r\n?|\n\r?' | %{ Write-Verbose "> $_" }
     Write-Verbose "CommitMessage = $CommitMessage"
+    Write-Verbose "ForceOnPushing = $ForceOnPushing"
     Write-Verbose "RequestedFor = $RequestedFor"
     Write-Verbose "RequestedForEmail = $RequestedForEmail";
     Write-Verbose "HerokuUrl = $HerokuUrl"
@@ -109,7 +112,11 @@ Write-Host "Committing changes"
     
     
 Write-Host "Starting to push changes"
-    Invoke-GitCommand -GitCommand "git push -f heroku master"
+    if($ForceOnPushing){
+        Invoke-GitCommand -GitCommand "git push -f heroku master"    
+    } else {
+        Invoke-GitCommand -GitCommand "git push heroku master"
+    }
     
     Write-Host "Push finished."
 

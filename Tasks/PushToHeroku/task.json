@@ -19,6 +19,13 @@
         "visualstudio"
     ],
     "minimumAgentVersion": "1.83.0",
+    "groups": [
+        {
+            "name": "advanced",
+            "displayName": "Advanced",
+            "isExpanded": false
+        }
+    ],
     "inputs": [
         {
             "name": "ApiKey",
@@ -59,6 +66,15 @@
             "defaultValue": "Pushed from $(ReleaseReleasename) - $(ReleaseReleasedescription).",
             "required": false,
             "helpMarkDown": "Message that identifies the release action. If left blank will be set to default value."
+        },
+        {
+            "name": "ForceOnPushing",
+            "type": "boolean",
+            "label": "Force On Push",
+            "defaultValue": "false",
+            "required": false,
+            "helpMarkDown": "If this is true, changes will be pushed using --force.",
+            "groupName": "advanced"
         }
     ],    
     "instanceNameFormat": "Push to Heroku: $(ArtifactName)",
