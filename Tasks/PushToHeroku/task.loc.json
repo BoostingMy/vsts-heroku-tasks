@@ -1,0 +1,75 @@
+// *******************************************************
+// GENERATED FILE - DO NOT EDIT DIRECTLY
+// *******************************************************
+{
+  "id": "90e55fc3-9daa-4f11-b946-66338210ec51",
+  "name": "PushToHeroku",
+  "friendlyName": "ms-resource:loc.friendlyName",
+  "description": "ms-resource:loc.description",
+  "helpMarkDown": "ms-resource:loc.helpMarkDown",
+  "category": "Deploy",
+  "visibility": [
+    "Release"
+  ],
+  "author": "Boosting.my",
+  "version": {
+    "Major": 0,
+    "Minor": 0,
+    "Patch": 1
+  },
+  "demands": [
+    "msbuild",
+    "visualstudio"
+  ],
+  "minimumAgentVersion": "1.83.0",
+  "inputs": [
+    {
+      "name": "ApiKey",
+      "type": "string",
+      "label": "ms-resource:loc.input.label.ApiKey",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "ms-resource:loc.input.help.ApiKey"
+    },
+    {
+      "name": "AppName",
+      "type": "string",
+      "label": "ms-resource:loc.input.label.AppName",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "ms-resource:loc.input.help.AppName"
+    },
+    {
+      "name": "PushRoot",
+      "type": "filePath",
+      "label": "ms-resource:loc.input.label.PushRoot",
+      "defaultValue": "",
+      "required": true,
+      "helpMarkDown": "ms-resource:loc.input.help.PushRoot"
+    },
+    {
+      "name": "GitIgnore",
+      "type": "multiLine",
+      "label": "ms-resource:loc.input.label.GitIgnore",
+      "defaultValue": "node_modules",
+      "required": false,
+      "helpMarkDown": "ms-resource:loc.input.help.GitIgnore"
+    },
+    {
+      "name": "CommitMessage",
+      "type": "string",
+      "label": "ms-resource:loc.input.label.CommitMessage",
+      "defaultValue": "Pushed from $(ReleaseReleasename) - $(ReleaseReleasedescription).",
+      "required": false,
+      "helpMarkDown": "ms-resource:loc.input.help.CommitMessage"
+    }
+  ],
+  "instanceNameFormat": "ms-resource:loc.instanceNameFormat",
+  "execution": {
+    "PowerShell": {
+      "target": "$(currentDirectory)\\PushToHeroku.ps1",
+      "argumentFormat": "",
+      "workingDirectory": "$(currentDirectory)"
+    }
+  }
+}

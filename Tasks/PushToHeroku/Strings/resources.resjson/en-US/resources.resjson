@@ -1,0 +1,19 @@
+// *******************************************************
+// GENERATED FILE - DO NOT EDIT DIRECTLY
+// *******************************************************
+{
+  "loc.friendlyName": "Push To Heroku",
+  "loc.helpMarkDown": "[More Information](https://github.com/BoostingMy/vsts-heroku-tasks/wiki)",
+  "loc.description": "Updates an app using Heroku Git.",
+  "loc.instanceNameFormat": "Push to Heroku: $(ArtifactName)",
+  "loc.input.label.ApiKey": "API Key",
+  "loc.input.help.ApiKey": "An valid API Key that represents a valid app contributor.",
+  "loc.input.label.AppName": "App Name",
+  "loc.input.help.AppName": "Name of the app which should be updated.",
+  "loc.input.label.PushRoot": "Push Root",
+  "loc.input.help.PushRoot": "Root folder to be pushed.",
+  "loc.input.label.GitIgnore": "Git Ignore",
+  "loc.input.help.GitIgnore": "File or folder paths to ignore on pushing to Keroku. See the [gitignore documentation](https://git-scm.com/docs/gitignore).",
+  "loc.input.label.CommitMessage": "Commit Message",
+  "loc.input.help.CommitMessage": "Message that identifies the release action. If left blank will be set to default value."
+}

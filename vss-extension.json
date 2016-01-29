@@ -1,0 +1,60 @@
+{
+    "manifestVersion": 1,
+    "id": "vsts-heroku-tasks",
+    "name": "Heroku Release Tools",
+    "version": "0.0.18",
+    "publisher": "BoostingMy",
+    "public": false,
+    "targets": [
+        {
+            "id": "Microsoft.VisualStudio.Services"
+        }
+    ],    
+    "description": "Tasks for Heroku deployment on Visual Studio Team Services release management.",
+    "categories": [
+        "Build and release"
+    ],
+    "icons": {
+        "default": "vss-extension-icon.png"        
+    },
+    "files": [
+        {
+            "path": "_build/Tasks/PushToHeroku"
+        }
+    ],
+    "content": {
+        "details":
+        {
+            "path": "vss-extension-details.md"
+        }
+    },    
+    "contributions": [
+        {
+            "id": "pushu-to-heroku",
+            "type": "ms.vss-distributed-task.task",
+            "targets": [
+                "ms.vss-distributed-task.tasks"
+            ],
+            "properties": {
+                "name": "_build/Tasks/PushToHeroku"
+            }
+        }
+    ],
+    "links": {
+        "home": {
+            "uri": "https://github.com/BoostingMy/vsts-heroku-tasks"
+        },
+        "getstarted": {
+            "uri": "https://github.com/BoostingMy/vsts-heroku-tasks/wiki"
+        },
+        "issues": {
+            "uri": "https://github.com/BoostingMy/vsts-heroku-tasks/issues"
+        },
+        "license": {
+            "uri": "https://github.com/BoostingMy/vsts-heroku-tasks/blob/master/LICENSE"
+        },
+        "repository": {
+            "uri": "https://github.com/BoostingMy/vsts-heroku-tasks"
+        }
+    }    
+}
