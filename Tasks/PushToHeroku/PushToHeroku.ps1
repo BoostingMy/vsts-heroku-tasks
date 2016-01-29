@@ -10,7 +10,7 @@ param(
     $GitIgnore,
     [String][Parameter(Mandatory = $false)] 
     $CommitMessage,
-    [bool][Parameter(Mandatory = $false)] 
+    [String][Parameter(Mandatory = $false)] 
     $ForceOnPushing
 )
 
@@ -38,15 +38,18 @@ function Invoke-GitCommand
     $output = "$GitCommand"
     foreach($line in $result) {
         $val = ""
-        if($line.GetType().Name -eq "ErrorRecord") {        
+        if($line.GetType().Name -eq "ErrorRecord") {
+            if($line -match ".*error:.*"){
+                throw ($line)
+            }
             $val = $line.Exception.Message
-        }
-        else {
+        }else{
             $val = $line
         }
+        
         $output = "$output`r`n$val"
     }
-
+    
     return $output
 }
 
@@ -112,7 +115,7 @@ Write-Host "Committing changes"
     
     
 Write-Host "Starting to push changes"
-    if($ForceOnPushing){
+    if($ForceOnPushing -eq "true"){
         Invoke-GitCommand -GitCommand "git push -f heroku master"    
     } else {
         Invoke-GitCommand -GitCommand "git push heroku master"
@@ -122,3 +125,5 @@ Write-Host "Starting to push changes"
 
 
 Write-Verbose "Leaving script PushToHeroku.ps1"
+
+throw ("Fake error")
