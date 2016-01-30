@@ -39,7 +39,7 @@ function Invoke-GitCommand
     foreach($line in $result) {
         $val = ""
         if($line.GetType().Name -eq "ErrorRecord") {
-            if($line -match ".*error:.*"){
+            if($line -match ".*error:.*" -or $line -match ".*fatal:.*"){
                 throw ($line)
             }
             $val = $line.Exception.Message
@@ -114,16 +114,18 @@ Write-Host "Committing changes"
     Invoke-GitCommand -GitCommand "git status" -OnlyDebug $true
     
     
-Write-Host "Starting to push changes"
-    if($ForceOnPushing -eq "true"){
-        Invoke-GitCommand -GitCommand "git push -f heroku master"    
-    } else {
-        Invoke-GitCommand -GitCommand "git push heroku master"
-    }
+if($ForceOnPushing -eq "true"){
+    Write-Host "Starting to push changes"
+    Invoke-GitCommand -GitCommand "git push -f heroku master"    
+} else {
+    Write-Host "Starting to pull"
+    Invoke-GitCommand -GitCommand "git pull heroku master"
+     
+    Write-Host "Starting to push changes"
+    Invoke-GitCommand -GitCommand "git push heroku master"
+}
     
     Write-Host "Push finished."
 
 
 Write-Verbose "Leaving script PushToHeroku.ps1"
-
-throw ("Fake error")

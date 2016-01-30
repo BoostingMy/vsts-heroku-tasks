@@ -2,7 +2,7 @@
     "manifestVersion": 1,
     "id": "vsts-heroku-tasks",
     "name": "Heroku Release Tools",
-    "version": "0.0.33",
+    "version": "0.0.45",
     "publisher": "BoostingMy",
     "public": true,
     "targets": [

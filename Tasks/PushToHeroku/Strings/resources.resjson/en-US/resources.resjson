@@ -18,5 +18,5 @@
   "loc.input.label.CommitMessage": "Commit Message",
   "loc.input.help.CommitMessage": "Message that identifies the release action. If left blank will be set to default value.",
   "loc.input.label.ForceOnPushing": "Force On Push",
-  "loc.input.help.ForceOnPushing": "If this is true, changes will be pushed using --force."
+  "loc.input.help.ForceOnPushing": "If this is true, changes will be pushed using --force. If this is false, pull will be executed. See [wiki](https://github.com/BoostingMy/vsts-heroku-tasks/wiki) for more information."
 }

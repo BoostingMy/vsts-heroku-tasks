@@ -71,9 +71,9 @@
             "name": "ForceOnPushing",
             "type": "boolean",
             "label": "Force On Push",
-            "defaultValue": "false",
+            "defaultValue": "true",
             "required": false,
-            "helpMarkDown": "If this is true, changes will be pushed using --force.",
+            "helpMarkDown": "If this is true, changes will be pushed using --force. If this is false, pull will be executed. See [wiki](https://github.com/BoostingMy/vsts-heroku-tasks/wiki) for more information.",
             "groupName": "advanced"
         }
     ],    
