@@ -74,7 +74,7 @@
       "name": "ForceOnPushing",
       "type": "boolean",
       "label": "ms-resource:loc.input.label.ForceOnPushing",
-      "defaultValue": "true",
+      "defaultValue": "false",
       "required": false,
       "helpMarkDown": "ms-resource:loc.input.help.ForceOnPushing",
       "groupName": "advanced"
