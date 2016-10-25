@@ -12,7 +12,7 @@
     "version": {
         "Major": 0,
         "Minor": 0,
-        "Patch": 1
+        "Patch": 2
     },
     "demands": [
         "msbuild",
@@ -63,7 +63,7 @@
             "name": "CommitMessage",
             "type": "string",
             "label": "Commit Message",
-            "defaultValue": "Pushed from $(ReleaseReleasename) - $(ReleaseReleasedescription).",
+            "defaultValue": "Pushed from $(Release.ReleaseName) - $(Release.ReleaseDescription).",
             "required": false,
             "helpMarkDown": "Message that identifies the release action. If left blank will be set to default value."
         },
