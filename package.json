@@ -28,11 +28,11 @@
     "gulp-typescript": "2.6.0",
     "gulp-util": "^3.0.4",
     "shelljs": "^0.3.0",
-    "tfx-cli": "^0.3.6",
+    "tfx-cli": "^0.3.30",
     "through2": "^0.6.3",
     "validator": "^3.33.0"
   },
   "dependencies": {
-      "q": "^1.2.0"
+    "q": "^1.2.0"
   }
 }
