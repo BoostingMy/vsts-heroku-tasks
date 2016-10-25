@@ -15,7 +15,7 @@
   "version": {
     "Major": 0,
     "Minor": 0,
-    "Patch": 1
+    "Patch": 2
   },
   "demands": [
     "msbuild",
@@ -66,7 +66,7 @@
       "name": "CommitMessage",
       "type": "string",
       "label": "ms-resource:loc.input.label.CommitMessage",
-      "defaultValue": "Pushed from $(ReleaseReleasename) - $(ReleaseReleasedescription).",
+      "defaultValue": "Pushed from $(Release.ReleaseName) - $(Release.ReleaseDescription).",
       "required": false,
       "helpMarkDown": "ms-resource:loc.input.help.CommitMessage"
     },
