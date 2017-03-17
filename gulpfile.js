@@ -4,7 +4,7 @@ var del = require('del');
 var shell = require('shelljs');
 var pkgm = require('./package');
 var ts = require('gulp-typescript');
-var tfx = require('./node_modules/tfx-cli/_build/app/exec/extension/create');
+var tfx = require('./node_modules/tfx-cli/_build/exec/extension/create');
 
 var _buildRoot = path.join(__dirname, '_build');
 var _tasksRoot = path.join(_buildRoot, 'Tasks');
