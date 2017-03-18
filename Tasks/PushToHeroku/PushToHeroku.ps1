@@ -112,7 +112,7 @@ Write-Host "Setting working directory to '$GitDirectory'"
 Write-Host "Cleaning up files"
     Get-ChildItem -Recurse -Force  | `
         ?{ $_.FullName -notlike "*.git*" } | `
-            Remove-Item -Force
+            Remove-Item -Force -Confirm:$false
             
     Write-Verbose "Files after cleaning up: "
     Get-ChildItem -Recurse -Force | %{ Write-Verbose $_.FullName }
