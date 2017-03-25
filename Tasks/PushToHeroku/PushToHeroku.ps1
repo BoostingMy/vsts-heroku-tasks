@@ -109,14 +109,14 @@ Write-Host "Setting working directory to '$GitDirectory'"
     Set-Location $GitDirectory
 
 
-Write-Host "Cleaning up files"
-    Get-ChildItem -Recurse -Force  | `
-        ?{ $_.FullName -notlike "*.git*" } | `
-            Remove-Item -Force -Confirm:$false
-            
-    Write-Verbose "Files after cleaning up: "
-    Get-ChildItem -Recurse -Force | %{ Write-Verbose $_.FullName }
-Write-Host "Files cleaned"
+#Write-Host "Cleaning up files"
+#    Get-ChildItem -Recurse -Force  | `
+#        ?{ $_.FullName -notlike "*.git*" } | `
+#            Remove-Item -Force -Confirm:$false
+#            
+#    Write-Verbose "Files after cleaning up: "
+#    Get-ChildItem -Recurse -Force | %{ Write-Verbose $_.FullName }
+#Write-Host "Files cleaned"
     
 
 Write-Host "Copying files from '$PushRoot'"

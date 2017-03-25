@@ -1,6 +1,6 @@
 {
   "name": "vsts.heroku.tasks",
-  "version": "1.0.6",
+  "version": "1.0.11",
   "description": "Tasks for Heroku deployment on Visual Studio Team Services release management.",
   "main": "gulpfile.js",
   "scripts": {
